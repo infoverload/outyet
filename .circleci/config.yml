@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/golang:alpine
+      - image: circleci/golang:1.11-node
     working_directory: /go/src/github.com/infoverload/outyet
     steps:
       - checkout
