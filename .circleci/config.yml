@@ -3,7 +3,10 @@ jobs:
   build:
     docker:
       - image: circleci/golang:alpine
+    working_directory: /go/src/github.com/infoverload/outyet
     steps:
       - checkout
-      - run: echo "A first hello"
+      - run: go test -v ./...
+
+
 
